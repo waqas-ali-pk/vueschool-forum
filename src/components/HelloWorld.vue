@@ -28,13 +28,22 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
+
+  >>>> Threads length: {{threads}}
 </template>
 
 <script>
+import sourceData from '@/data.json'
+console.log(sourceData)
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      threads: sourceData.threads.length
+    }
   }
 }
 </script>
